@@ -1,0 +1,192 @@
+html,body{
+	margin: 0px;
+	padding:0px;
+}
+
+#HeaderD{
+	width: 100%;
+	background:#F7F8FA;
+	border-bottom: 3px solid #d9d9d9; 
+	/*overflow-y: hidden;
+	overflow-x: hidden;*/
+	position: fixed;
+	z-index: 100;
+}
+
+#HeaderDAdmin{
+	width: 100%;
+	background:#053861;
+	/*	*/
+	/*overflow-y: hidden;
+	overflow-x: hidden;*/
+	position: fixed;
+	z-index: 100;
+}
+
+#LogoD{
+	padding: 20px 0px;
+}
+
+#menudiv ul {
+	margin:0px;
+	padding: 0px;
+	float:right;
+}
+
+#menudiv ul li {
+	display:inline-block;
+	padding:50px 34.5px;
+}
+
+#menudiv ul li ul li{
+	display:block;
+	padding-left: 100px;
+	padding-right:100px;
+	width: 100%;	
+}
+
+#menudiv ul li ul li:hover {
+	background-color:#16A4FA;
+}
+
+#menudiv ul li ul {
+	position: absolute;
+	top:110px;
+	background-color: #F0F0F0;
+	left:0px;
+	margin:0px;
+	padding: 0px;
+	z-index: 1000;
+}
+
+#menudiv ul li:hover > #servicesub {
+	display:block;
+}
+
+#menudiv ul li:hover{
+	background:#16A4FA;
+}
+
+#IntroductionD{
+	padding-top: 200px;
+	padding-bottom: 100px;
+	text-align: center;
+}
+
+#title1 h1{
+	font-size: 50px;
+}
+
+#title2 p{
+	font-size: 20px;
+	color: grey;
+	letter-spacing: 1px;	
+	text-align: center;
+}
+
+#AdvertismentD{
+	background:#F7F8FA;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.box{
+	padding: 15px;
+}
+
+.imgIconBox{
+	background:#48BAFF;
+	width:8em;
+	margin:0px auto;
+	padding:25px;
+	text-align: center;
+}
+
+#ContactTag{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#Portfolio{
+	padding-top: 50px;
+	padding-bottom:50px;
+}
+
+
+.imgPortfolio{
+	margin-top: 30px;
+	width: 100%;
+	height: 300px;
+}
+
+.imageoverlay{
+	height: 100%;
+	width: 100%;
+	background: rgba(22,164,250,0.8);
+	display: none;
+}
+
+.imgPortfolio:hover > .imageoverlay{
+	display: block;
+}
+
+.imageIconBox{
+	display: flex;
+	width:27%;
+	margin:0px auto;
+}
+
+.BoxImg{
+	border: 1px solid white; 
+	padding: 10px; 
+	margin-top:100px;
+}
+
+.BoxImg1{
+	border: 1px solid white; 
+	padding: 10px;
+	margin-left:10px;
+	margin-top:100px;
+}
+
+#FeedbackD{
+	width: 100%;
+	margin-top:100px;
+	background:url('../Images/nightroa.jpg'); 
+	background-size: cover;
+	background-position: center;
+}
+
+#overlay{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*height: 100%;*/
+	width:100%;
+	background:rgba(0,0,0,0.9);
+}
+
+#menudiv ul li:hover > #menudiv ul{
+	display:block;
+}
+
+#menuicon{
+	display: none;
+}
+
+#Dashboard{
+	margin-top: 5px;
+}
+#DashboardMenu{
+	background: #053861;
+	height: 855px;
+	/*border: 10px solid #075392;*/
+}
+
+#DashboardItem{
+	background: #053861;
+	padding-left: 5px;		
+	height: 855px;
+	border-left: 5px solid white;
+}
+/* CSS Document */
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Panel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="icon" href="./IMAGES/MyLMSLogo.png">
+  	<link rel="stylesheet" href="./CSS/style.css">
+  	<script type="text/javascript" src="./JS/MyLms.js"></script>
+  	<script type="text/javascript" src="./JS/User.js"></script>
+  	<script type="text/javascript" src="./JS/Course.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	  	    if(sessionStorage.getItem("UserNameSsn")!=""){
+
+	  	    }
+	  	    else{
+	  	    	window.location="index.html";
+	  	    }
+	  	});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	  	    $("#courseModal").css({"display":"none"});
+	  	});
+	</script>
+	<script type="text/javascript">
+	  	$(document).ready(function(){
+	  	  $("#courseBtn").click(function(){
+	  	    $("#courseModal").css({"display":"block"});
+	  	    // showData();
+	  	  });
+	  	});
+	</script>
+	<script type="text/javascript">
+		function logout(){
+			if(sessionStorage.getItem("UserNameSsn")){
+				sessionStorage.setItem("UserNameSsn","");
+				console.log("Logout");
+				window.location="index.html";
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- This is the Header Part With Navigation Menu -->
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="LogoD" style="margin-left:20px;">	 
+					<img src="./IMAGES/MyLMSLogo.png" height="80">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="margin-top: 20px;">
+					<marquee direction="left" scrollamount="13" behavior="alternate"><h2 style="color: #f97706; font-weight: 600; ">Welcome to MyLMS Keep Learning</h2>
+					</marquee>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-12 col-xs-12" style="margin-top:20px;">
+					<h3 id="myUser" style="color:#f97706;">Welcome,<br></h3>
+					<script type="text/javascript">console.log("Welcome:"+sessionStorage.getItem("UserNameSsn"));
+					document.getElementById("myUser").innerHTML+=sessionStorage.getItem("UserNameSsn");
+					</script>
+					<a onclick="logout()">Logout</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- This Div for Dashboard -->
+	<div class="container-fluid">
+		<div class="row" id="Dashboard">
+			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="DashboardMenu">
+				<div class="row" style="margin-top: 50px; margin-left: 30px;">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<button type="button" class="btn btn-primary" id="courseBtn" onclick="courseCheck()">Courses</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12" id="DashboardItem" style="padding: 50px;">
+				<div id="courseModal" style="color: white;">
+					<button class="btn btn-info" id="ShowCourseBtn" onclick="showCourse()">Show Course</button>
+					<div id="coursetable">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
